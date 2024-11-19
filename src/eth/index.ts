@@ -1,7 +1,6 @@
 import { Interface } from '@ethersproject/abi';
 import { FeeMarketEIP1559Transaction,Transaction } from '@ethereumjs/tx';
 import Common from "@ethereumjs/common";
-import any = jasmine.any;
 
 const ethers = require("ethers");
 const BigNumber = require("bignumber.js");
