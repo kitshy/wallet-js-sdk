@@ -1,17 +1,18 @@
 const bip39 = require('bip39');
 const ethers = require('ethers');
-import {createAddress,publicKeyToAddress,importEthAddress,ethSign} from "../src/eth/index";
+import {createAddress,publicKeyToAddress,importEthAddress,ethSign} from "../src/eth";
 
 describe('eth unit test', () => {
 
     test('mnemonic create address',  () => {
 
-        const mnemonic = "champion junior low analyst plug jump entire barrel slight swim hidden remove";
+        const mnemonic = "kitchen stone pattern world ten drum perfect desk company floor advance unfold";
         const seed = bip39.mnemonicToSeedSync(mnemonic);
         const account = createAddress(seed.toString("hex"), "0");
         console.log("mnemonic create address index 0 : ",account);
         const account1 = createAddress(seed.toString("hex"), "1");
         console.log("mnemonic create address index 1 : ",account1);
+
     })
 
     test('import private address',  () => {

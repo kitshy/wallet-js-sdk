@@ -7,11 +7,12 @@ import {
     publicKeyToAddress,
     signAtomTransaction, signV2Transaction,
     verifyAtomAddress
-} from "../src/cosmos/index";
+} from "../src/cosmos";
 
 describe('cosmos unit test', () => {
 
     /**
+     * "champion junior glimpse analyst plug jump entire barrel slight swim hidden remove"
      * mnemonic create Atom address index 0 :  {
      *       privateKey: 'b7837cb25cec44b068f1e189bdc94203a814141404d3441bef3c3c8dc016dfe7',
      *       publicKey: '036e8f01c6e68d9c5c66ab172ff0898234c7a889997802437bce6e7d1f89161fc1',
@@ -19,9 +20,9 @@ describe('cosmos unit test', () => {
      *     }
      */
     test('create Atom Address', () => {
-        const mnemonic = "champion junior glimpse analyst plug jump entire barrel slight swim hidden remove";
+        const mnemonic = "kitchen stone pattern world ten drum perfect desk company floor advance unfold";
         const seed = bip39.mnemonicToSeedSync(mnemonic);
-        const account = createAtomAddress(seed.toString('hex'),"0","mainnet")
+        const account = createAtomAddress(seed.toString('hex'),"1","mainnet")
         console.log("mnemonic create Atom address index 0 : ",account);
     })
 

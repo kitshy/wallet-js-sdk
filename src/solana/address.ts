@@ -11,7 +11,8 @@ const {isHex,isBase58} = require("../common/utils")
 export function createAddress(seedHex:string,addressIndex:string) {
 
     // 生成私钥、公钥对。m/44/chain/account/change/index。bip44协议推导地址  solana 没有 找零地址
-    const { key } = derivePath("m/44'/501'/0'/" + addressIndex + "'", seedHex);
+    // const {key} = derivePath("m/44'/501'/0'/"+addressIndex+"'", seedHex);
+    const { key } = derivePath("m/44'/501'/" + addressIndex +"'/0'", seedHex);
 
     // 生成对应的公钥
     const publicKey = getPublicKey(new Uint8Array(key), false);

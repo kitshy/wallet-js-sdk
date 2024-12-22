@@ -31,7 +31,7 @@ describe('solana unit test', () => {
         const mnemonic = "kitchen stone pattern world ten drum perfect desk company floor advance unfold";
         const seedHex = bip39.mnemonicToSeedSync(mnemonic);
 
-        const  account = createAddress(seedHex.toString('hex'),"0");
+        const  account = createAddress(seedHex,"1");
 
         console.log("mnemonic create address : ",account);
 
